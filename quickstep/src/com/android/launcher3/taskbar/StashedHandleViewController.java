@@ -71,7 +71,8 @@ public class StashedHandleViewController implements TaskbarControllers.LoggableT
     public static final int ALPHA_INDEX_NUDGED = 4;
     public static final int ALPHA_INDEX_ALL_SET_TRANSITION = 5;
     public static final int ALPHA_INDEX_CUEBAR_HIDDEN = 6;
-    private static final int NUM_ALPHA_CHANNELS = 7;
+    public static final int ALPHA_INDEX_NAV_HANDLE_HIDDEN = 7;
+    private static final int NUM_ALPHA_CHANNELS = 8;
 
     // Values for long press animations, picked to most closely match navbar spec.
     private static final float SCALE_TOUCH_ANIMATION_SHRINK = 0.85f;
@@ -129,6 +130,7 @@ public class StashedHandleViewController implements TaskbarControllers.LoggableT
         mTaskbarStashedHandleAlpha.setUpdateVisibility(true);
         mStashedHandleView.updateHandleColor(
                 mPrefs.get(STASHED_HANDLE_REGION_IS_DARK), false /* animate */);
+        mTaskbarStashedHandleAlpha.get(ALPHA_INDEX_NAV_HANDLE_HIDDEN).setValue(0);
         final Resources resources = activity.getResources();
         mStashedHandleHeight = resources.getDimensionPixelSize(
                 R.dimen.taskbar_stashed_handle_height);
