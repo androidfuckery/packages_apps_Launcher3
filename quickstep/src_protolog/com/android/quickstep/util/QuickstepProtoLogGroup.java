@@ -101,7 +101,7 @@ public enum QuickstepProtoLogGroup implements IProtoLogGroup {
         private static final boolean DEBUG_RECENTS_WINDOW = false;
         private static final boolean DEBUG_STATE_MANAGER = false; // b/279059025, b/325463989
         private static final boolean DEBUG_OVERVIEW_COMMAND_HELPER = false;
-        private static final boolean DEBUG_BUBBLES = true;
+        private static final boolean DEBUG_BUBBLES = false;
 
         private static final int LOG_START_ID =
                 (int) (UUID.nameUUIDFromBytes(QuickstepProtoLogGroup.class.getName().getBytes())

@@ -31,6 +31,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.android.launcher3.AppFilter;
+import com.android.launcher3.BuildConfig;
 import com.android.launcher3.Flags;
 import com.android.launcher3.automation.AutomationRepository;
 import com.android.launcher3.compat.AlphabeticIndexCompat;
@@ -66,7 +67,7 @@ import javax.inject.Provider;
 public class AllAppsList {
 
     private static final String TAG = "AllAppsList";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = BuildConfig.IS_DEBUG_DEVICE;
 
     public static final int DEFAULT_APPLICATIONS_NUMBER = 42;
 

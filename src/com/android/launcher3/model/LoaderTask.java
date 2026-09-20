@@ -56,6 +56,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.WorkerThread;
 
+import com.android.launcher3.BuildConfig;
 import com.android.launcher3.Flags;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherModel;
@@ -138,7 +139,7 @@ import javax.inject.Provider;
 public class LoaderTask implements Runnable {
     private static final String TAG = "LoaderTask";
 
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = BuildConfig.IS_DEBUG_DEVICE;
 
     public final String name;
     private final Context mContext;

@@ -23,6 +23,7 @@ import android.graphics.Point
 import android.util.ArrayMap
 import android.util.Log
 import androidx.annotation.VisibleForTesting
+import com.android.launcher3.BuildConfig
 import com.android.launcher3.LauncherSettings.Favorites.APPWIDGET_ID
 import com.android.launcher3.LauncherSettings.Favorites.APPWIDGET_PROVIDER
 import com.android.launcher3.LauncherSettings.Favorites.CELLX
@@ -238,6 +239,6 @@ class DbReader(val mDb: SQLiteDatabase, val mTableName: String, val mContext: Co
 
     companion object {
         private const val TAG = "DbReader"
-        private const val DEBUG = true
+        private const val DEBUG = BuildConfig.IS_DEBUG_DEVICE
     }
 }

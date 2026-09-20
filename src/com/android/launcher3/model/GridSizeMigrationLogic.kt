@@ -20,6 +20,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.graphics.Point
 import android.util.Log
 import androidx.annotation.VisibleForTesting
+import com.android.launcher3.BuildConfig
 import com.android.launcher3.LauncherPrefs
 import com.android.launcher3.LauncherSettings
 import com.android.launcher3.LauncherSettings.Favorites
@@ -570,6 +571,6 @@ constructor(
 
     companion object {
         private const val TAG = "GridSizeMigrationLogic"
-        private const val DEBUG = true
+        private const val DEBUG = BuildConfig.IS_DEBUG_DEVICE
     }
 }

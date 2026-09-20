@@ -7,14 +7,14 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.android.launcher3.BuildConfig;
 import com.android.launcher3.Utilities;
 
 import java.util.Locale;
 
 public class AlphabeticIndexCompat {
 
-    // TODO(b/336947811): Set to false after root causing is done.
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = BuildConfig.IS_DEBUG_DEVICE;
     private static final String TAG = "AlphabeticIndexCompat";
     private static final String MID_DOT = "\u2219";
     private final String mDefaultMiscLabel;

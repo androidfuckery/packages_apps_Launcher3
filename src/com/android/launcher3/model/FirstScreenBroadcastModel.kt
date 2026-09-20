@@ -22,6 +22,7 @@ import android.app.PendingIntent.FLAG_ONE_SHOT
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import com.android.launcher3.BuildConfig
 
 /** Data model for the information used for [FirstScreenBroadcastHelper] Broadcast Extras */
 data class FirstScreenBroadcastModel(
@@ -113,7 +114,7 @@ data class FirstScreenBroadcastModel(
 
     companion object {
         private const val TAG = "FirstScreenBroadcastModel"
-        private const val DEBUG = true
+        private const val DEBUG = BuildConfig.IS_DEBUG_DEVICE
 
         private const val ACTION_FIRST_SCREEN_ACTIVE_INSTALLS =
             "com.android.launcher3.action.FIRST_SCREEN_ACTIVE_INSTALLS"

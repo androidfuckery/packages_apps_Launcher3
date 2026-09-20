@@ -21,6 +21,7 @@ import android.database.DatabaseUtils
 import android.database.sqlite.SQLiteDatabase
 import android.util.Log
 import androidx.annotation.VisibleForTesting
+import com.android.launcher3.BuildConfig
 import com.android.launcher3.GridType.Companion.GRID_TYPE_STANDARD
 import com.android.launcher3.InvariantDeviceProfile
 import com.android.launcher3.LauncherSettings
@@ -33,7 +34,7 @@ import com.android.launcher3.util.IntArray
  */
 object GridSizeMigrationDBController {
     const val TAG = "GridSizeMigrationDBController"
-    const val DEBUG = true
+    const val DEBUG = BuildConfig.IS_DEBUG_DEVICE
 
     /** Check given a new IDP, if migration is necessary. */
     @JvmStatic

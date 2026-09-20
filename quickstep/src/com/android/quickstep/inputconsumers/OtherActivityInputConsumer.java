@@ -43,6 +43,7 @@ import android.window.TransitionInfo;
 import androidx.annotation.UiThread;
 
 import com.android.launcher3.R;
+import com.android.launcher3.BuildConfig;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.statehandlers.DesktopVisibilityController;
 import com.android.launcher3.testing.TestLogging;
@@ -75,7 +76,7 @@ import java.util.function.Consumer;
 public class OtherActivityInputConsumer extends ContextWrapper implements InputConsumer {
 
     private static final String TAG = "OtherActivityInputConsumer";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = BuildConfig.IS_DEBUG_DEVICE;
 
     public static final String DOWN_EVT = "OtherActivityInputConsumer.DOWN";
     private static final String UP_EVT = "OtherActivityInputConsumer.UP";

@@ -51,6 +51,7 @@ import android.view.WindowManager.LayoutParams;
 import androidx.annotation.Nullable;
 
 import com.android.launcher3.AbstractFloatingView;
+import com.android.launcher3.BuildConfig;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Flags;
 import com.android.launcher3.R;
@@ -79,7 +80,7 @@ public final class TaskbarOverlayController
 
     private static final String TAG = "TaskbarOverlayController";
     private static final String WINDOW_TITLE = "Taskbar Overlay";
-    private static final boolean DEBUG = true; // b/446041145
+    private static final boolean DEBUG = BuildConfig.IS_DEBUG_DEVICE;
 
     private final TaskbarActivityContext mTaskbarContext;
     private final Context mWindowContext;

@@ -83,7 +83,7 @@ import java.util.function.Consumer;
 public class ItemClickHandler {
 
     private static final String TAG = "ItemClickHandler";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = BuildConfig.IS_DEBUG_DEVICE;
 
     /**
      * Instance used for click handling on items
