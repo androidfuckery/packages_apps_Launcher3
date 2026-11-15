@@ -205,15 +205,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             }, 1f /* initialValue */);
         }
 
-        // The screenshot button is implemented as a Button in launcher3 and NexusLauncher, but is
-        // an ImageButton in go launcher (does not share a common class with Button). Take care when
-        // casting this.
-        View screenshotButton = findViewById(R.id.action_screenshot);
-        screenshotButton.setOnClickListener(this);
-        mSplitButton = findViewById(R.id.action_split);
-        mSplitButton.setOnClickListener(this);
         View clearAllButton = findViewById(R.id.action_clear_all);
         clearAllButton.setOnClickListener(this);
+        mSplitButton = findViewById(R.id.action_split);
+        mSplitButton.setOnClickListener(this);
         mSaveAppPairButton.setOnClickListener(this);
     }
 
@@ -232,12 +227,10 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             return;
         }
         final int id = view.getId();
-        if (id == R.id.action_screenshot) {
-            mCallbacks.onScreenshot();
+        if (id == R.id.action_clear_all) {
+            mCallbacks.onClearAllTasksRequested();
         } else if (id == R.id.action_split) {
             mCallbacks.onSplit();
-        } else if (id == R.id.action_clear_all) {
-            mCallbacks.onClearAllTasksRequested();
         } else if (id == R.id.action_save_app_pair) {
             mCallbacks.onSaveAppPair();
         }
